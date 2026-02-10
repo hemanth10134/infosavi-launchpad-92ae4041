@@ -1,48 +1,46 @@
-import { Linkedin, Twitter, Mail } from "lucide-react";
+import { Linkedin, Mail } from "lucide-react";
 
 const Footer = () => {
   const footerLinks = {
     Services: [
-      "Strategy Consulting",
-      "Digital Transformation",
-      "Risk Management",
-      "Performance Analytics",
+      "Digital Workplace Services",
+      "Service Management",
+      "Cloud Consulting",
+      "OaaS",
     ],
-    Company: ["About Us", "Our Team", "Careers", "Contact"],
-    Resources: ["Insights", "Case Studies", "White Papers", "Newsroom"],
-    Legal: ["Privacy Policy", "Terms of Service", "Cookie Policy"],
+    Company: ["About Us", "Our Team", "Contact"],
+    Legal: ["Privacy Policy", "Terms of Service"],
   };
 
   return (
     <footer className="bg-foreground text-background py-16">
       <div className="container mx-auto px-6 lg:px-8">
-        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-6">
-              <div className="w-10 h-10 bg-background rounded-lg flex items-center justify-center">
-                <span className="text-foreground font-bold text-xl">I</span>
+              <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+                <span className="text-primary-foreground font-bold text-xl">I</span>
               </div>
               <span className="text-xl font-semibold">InfoSavi</span>
             </div>
-            <p className="text-background/70 text-sm leading-relaxed mb-6">
-              Strategic consulting for forward-thinking enterprises.
+            <p className="text-background/70 text-sm leading-relaxed mb-4">
+              Strategic IT consulting for forward-thinking enterprises.
+            </p>
+            <p className="text-background/60 text-xs leading-relaxed mb-6">
+              WeWork - Vaishnavi Signature, Outer Ring Road, Bellandur, Bangalore
             </p>
             <div className="flex gap-4">
               <a
-                href="#"
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 bg-background/10 rounded-lg flex items-center justify-center hover:bg-background/20 transition-colors"
               >
                 <Linkedin className="h-5 w-5" />
               </a>
               <a
-                href="#"
-                className="w-10 h-10 bg-background/10 rounded-lg flex items-center justify-center hover:bg-background/20 transition-colors"
-              >
-                <Twitter className="h-5 w-5" />
-              </a>
-              <a
-                href="#"
+                href="mailto:contact@infosavi.com"
                 className="w-10 h-10 bg-background/10 rounded-lg flex items-center justify-center hover:bg-background/20 transition-colors"
               >
                 <Mail className="h-5 w-5" />
@@ -73,7 +71,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-background/10 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-background/50 text-sm">
-            © 2026 InfoSavi. All rights reserved.
+            © 2025 InfoSavi. All rights reserved.
           </p>
           <div className="flex gap-6">
             <a href="#" className="text-background/50 hover:text-background text-sm transition-colors">
@@ -81,9 +79,6 @@ const Footer = () => {
             </a>
             <a href="#" className="text-background/50 hover:text-background text-sm transition-colors">
               Terms
-            </a>
-            <a href="#" className="text-background/50 hover:text-background text-sm transition-colors">
-              Cookies
             </a>
           </div>
         </div>

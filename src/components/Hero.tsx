@@ -20,51 +20,31 @@ const Hero = () => {
           {/* Text Content */}
           <div className="max-w-xl animate-fade-in-up">
             <p className="text-muted-foreground text-sm font-medium uppercase tracking-widest mb-4">
-              Strategic Consulting
+              IT Consulting &amp; Services
             </p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground leading-tight mb-6">
               Transform Your
-              <span className="block text-primary">Business Vision</span>
+              <span className="block text-primary">Digital Enterprise</span>
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-              We partner with forward-thinking enterprises to drive sustainable
-              growth, operational excellence, and digital transformation across
-              industries.
+              We partner with forward-thinking organizations to deliver digital
+              workplace solutions, cloud consulting, and managed IT services
+              that drive real results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button className="bg-primary hover:bg-navy-light text-primary-foreground px-8 py-6 text-base font-medium group">
-                Get Started
-                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </Button>
+              <a href="mailto:contact@infosavi.com">
+                <Button className="bg-primary hover:bg-purple-light text-primary-foreground px-8 py-6 text-base font-medium group">
+                  Schedule a Consultation
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </a>
               <Button
                 variant="outline"
                 className="border-border text-foreground hover:bg-secondary px-8 py-6 text-base font-medium"
+                onClick={() => document.getElementById("services")?.scrollIntoView({ behavior: "smooth" })}
               >
-                Learn More
+                Our Services
               </Button>
-            </div>
-
-            {/* Trust Indicators */}
-            <div className="mt-12 pt-8 border-t border-border">
-              <p className="text-sm text-muted-foreground mb-4">
-                Trusted by industry leaders
-              </p>
-              <div className="flex items-center gap-8">
-                <div className="text-center">
-                  <p className="text-3xl font-semibold text-foreground">500+</p>
-                  <p className="text-sm text-muted-foreground">Clients</p>
-                </div>
-                <div className="w-px h-12 bg-border" />
-                <div className="text-center">
-                  <p className="text-3xl font-semibold text-foreground">25+</p>
-                  <p className="text-sm text-muted-foreground">Years</p>
-                </div>
-                <div className="w-px h-12 bg-border" />
-                <div className="text-center">
-                  <p className="text-3xl font-semibold text-foreground">98%</p>
-                  <p className="text-sm text-muted-foreground">Success Rate</p>
-                </div>
-              </div>
             </div>
           </div>
 
