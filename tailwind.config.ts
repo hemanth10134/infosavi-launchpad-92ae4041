@@ -61,14 +61,14 @@ export default {
           ring: "hsl(var(--sidebar-ring))",
         },
         // Custom corporate colors
-        navy: {
-          DEFAULT: "hsl(var(--navy))",
-          light: "hsl(var(--navy-light))",
-          dark: "hsl(var(--navy-dark))",
+        purple: {
+          DEFAULT: "hsl(var(--purple))",
+          light: "hsl(var(--purple-light))",
+          dark: "hsl(var(--purple-dark))",
         },
         "gray-light": "hsl(var(--gray-light))",
         "gray-medium": "hsl(var(--gray-medium))",
-        "blue-accent": "hsl(var(--blue-accent))",
+        "purple-accent": "hsl(var(--purple-accent))",
       },
       borderRadius: {
         lg: "var(--radius)",

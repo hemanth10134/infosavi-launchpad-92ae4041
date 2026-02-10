@@ -17,8 +17,7 @@ const Navbar = () => {
   const navLinks = [
     { label: "Services", href: "#services" },
     { label: "About", href: "#about" },
-    { label: "Insights", href: "#insights" },
-    { label: "Careers", href: "#careers" },
+    { label: "Contact", href: "#contact" },
   ];
 
   return (
@@ -56,9 +55,11 @@ const Navbar = () => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button className="bg-primary hover:bg-navy-light text-primary-foreground px-6 py-2 text-sm font-medium transition-colors duration-200">
-              Contact Us
-            </Button>
+            <a href="mailto:contact@infosavi.com">
+              <Button className="bg-primary hover:bg-purple-light text-primary-foreground px-6 py-2 text-sm font-medium transition-colors duration-200">
+                Contact Us
+              </Button>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -88,9 +89,11 @@ const Navbar = () => {
                   {link.label}
                 </a>
               ))}
-              <Button className="bg-primary hover:bg-navy-light text-primary-foreground w-full mt-4">
-                Contact Us
-              </Button>
+              <a href="mailto:contact@infosavi.com">
+                <Button className="bg-primary hover:bg-purple-light text-primary-foreground w-full mt-4">
+                  Contact Us
+                </Button>
+              </a>
             </div>
           </div>
         )}

@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 /* InfoSavi Corporate Design System
-   Colors: White + Light Gray + Navy Blue
+   Colors: White + Light Gray + Purple
    Style: Clean, Minimal, Professional Consulting
 */
 
@@ -15,8 +15,8 @@
     --background: 0 0% 100%;
     --foreground: 222 47% 11%;
 
-    /* Navy blue primary */
-    --primary: 222 47% 15%;
+    /* Purple primary */
+    --primary: 270 60% 40%;
     --primary-foreground: 0 0% 100%;
 
     /* Light gray secondary */
@@ -35,9 +35,9 @@
     --muted: 210 40% 96%;
     --muted-foreground: 215 16% 47%;
 
-    /* Accent - subtle blue */
-    --accent: 213 94% 95%;
-    --accent-foreground: 222 47% 15%;
+    /* Accent - subtle purple */
+    --accent: 270 60% 95%;
+    --accent-foreground: 270 60% 40%;
 
     /* Destructive */
     --destructive: 0 84% 60%;
@@ -46,18 +46,18 @@
     /* Borders and inputs */
     --border: 214 32% 91%;
     --input: 214 32% 91%;
-    --ring: 222 47% 15%;
+    --ring: 270 60% 40%;
 
     /* Radius */
     --radius: 0.75rem;
 
     /* Custom corporate colors */
-    --navy: 222 47% 15%;
-    --navy-light: 222 35% 25%;
-    --navy-dark: 222 55% 10%;
+    --purple: 270 60% 40%;
+    --purple-light: 270 50% 55%;
+    --purple-dark: 270 65% 30%;
     --gray-light: 210 40% 98%;
     --gray-medium: 215 16% 47%;
-    --blue-accent: 213 94% 52%;
+    --purple-accent: 270 80% 60%;
 
     /* Sidebar (inherited) */
     --sidebar-background: 0 0% 98%;

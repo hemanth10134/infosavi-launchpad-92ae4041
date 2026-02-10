@@ -2,10 +2,10 @@ import { CheckCircle } from "lucide-react";
 import aboutImage from "@/assets/about-office.jpg";
 
 const differentiators = [
-  "Deep industry expertise across sectors",
-  "Data-driven approach to problem solving",
-  "Collaborative partnership model",
-  "Proven track record of measurable results",
+  "End-to-end IT service management expertise",
+  "Cloud-first consulting approach",
+  "Customized solutions for hybrid workplaces",
+  "Proven track record with retail & enterprise clients",
 ];
 
 const About = () => {
@@ -18,14 +18,14 @@ const About = () => {
             <div className="rounded-2xl overflow-hidden shadow-corporate-lg">
               <img
                 src={aboutImage}
-                alt="InfoSavi corporate headquarters"
+                alt="InfoSavi office"
                 className="w-full h-[500px] object-cover"
               />
             </div>
             {/* Floating Stats Card */}
             <div className="absolute -bottom-8 -right-8 bg-primary text-primary-foreground p-8 rounded-xl shadow-corporate-lg hidden lg:block">
-              <p className="text-4xl font-bold mb-2">25+</p>
-              <p className="text-sm opacity-90">Years of Excellence</p>
+              <p className="text-4xl font-bold mb-2">Est.</p>
+              <p className="text-sm opacity-90">2025</p>
             </div>
           </div>
 
@@ -35,17 +35,19 @@ const About = () => {
               About InfoSavi
             </p>
             <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-6">
-              Your Partner in Strategic Excellence
+              Your Partner in IT Excellence
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              For over two decades, InfoSavi has been at the forefront of
-              management consulting, helping organizations navigate complexity
-              and achieve sustainable growth.
+              Founded in 2025, InfoSavi is a service-based IT consulting startup
+              focused on helping organizations modernize their operations,
+              embrace cloud solutions, and deliver exceptional workplace
+              experiences.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
-              Our team of seasoned professionals brings together diverse
-              expertise from leading global firms, offering you best-in-class
-              strategic advisory services tailored to your unique challenges.
+              Based out of WeWork - Vaishnavi Signature, Bellandur, Bangalore,
+              our team brings together deep expertise in digital workplace
+              services, service management, cloud consulting, and retail IT
+              operations.
             </p>
 
             {/* Differentiators */}
