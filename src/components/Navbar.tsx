@@ -1,15 +1,18 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import icon from "@/assets/icon.jpg";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+  // Detect scroll for effects
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
     };
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -22,47 +25,51 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-background shadow-corporate"
-          : "bg-background/95 backdrop-blur-sm"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-white/20 ${isScrolled
+        ? "bg-white/80 backdrop-blur-md shadow-md h-16"
+        : "bg-white/10 backdrop-blur-lg h-20"
+        }`}
     >
-      <div className="container mx-auto px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <a href="#" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-xl">I</span>
-            </div>
-            <span className="text-2xl font-semibold text-foreground tracking-tight">
-              InfoSavi
-            </span>
+      <div className="container mx-auto px-6 lg:px-8 h-full">
+        <div className="flex items-center justify-between h-full">
+
+          {/* ================= Logo ================= */}
+          <a href="#" className="flex items-center gap-3">
+            <img
+              src={icon}
+              alt="InfoSavi Logo"
+              className={`transition-all duration-300 ${isScrolled ? "h-12" : "h-16"
+                } w-auto object-contain mix-blend-multiply`}
+            />
+
           </a>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          {/* ================= Desktop Links ================= */}
+          <div className="hidden md:flex items-center space-x-10">
             {navLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
-                className="text-muted-foreground hover:text-foreground transition-colors duration-200 text-sm font-medium"
+                className="relative group text-sm font-medium text-foreground"
               >
                 {link.label}
+
+                {/* animated underline */}
+                <span className="absolute left-0 -bottom-1 h-0.5 w-0 bg-brand-purple transition-all duration-300 group-hover:w-full"></span>
               </a>
             ))}
           </div>
 
-          {/* CTA Button */}
-          <div className="hidden md:block">
-            <a href="mailto:contact@infosavi.com">
-              <Button className="bg-primary hover:bg-purple-light text-primary-foreground px-6 py-2 text-sm font-medium transition-colors duration-200">
+          {/* ================= Desktop Button ================= */}
+          <div className="hidden md:flex items-center">
+            <a href="#contact">
+              <Button className="bg-brand-purple hover:bg-purple-700 text-white px-6 py-2 text-sm font-medium rounded-full shadow-md hover:shadow-lg transition-all duration-300">
                 Contact Us
               </Button>
             </a>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* ================= Mobile Toggle ================= */}
           <button
             className="md:hidden p-2"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -75,22 +82,24 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* Mobile Menu */}
+        {/* ================= Mobile Menu ================= */}
         {isMobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-border animate-fade-in">
-            <div className="flex flex-col space-y-4">
+          <div className="md:hidden py-5 border-t border-border animate-fade-in bg-white">
+            <div className="flex flex-col space-y-5">
+
               {navLinks.map((link) => (
                 <a
                   key={link.label}
                   href={link.href}
-                  className="text-muted-foreground hover:text-foreground transition-colors duration-200 text-sm font-medium py-2"
+                  className="text-foreground text-sm font-medium hover:text-brand-purple"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.label}
                 </a>
               ))}
-              <a href="mailto:contact@infosavi.com">
-                <Button className="bg-primary hover:bg-purple-light text-primary-foreground w-full mt-4">
+
+              <a href="#contact">
+                <Button className="bg-brand-purple text-white w-full rounded-full">
                   Contact Us
                 </Button>
               </a>

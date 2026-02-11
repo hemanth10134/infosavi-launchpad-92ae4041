@@ -18,20 +18,20 @@ const Hero = () => {
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Text Content */}
-          <div className="max-w-xl animate-fade-in-up">
-            <p className="text-muted-foreground text-sm font-medium uppercase tracking-widest mb-4">
+          <div className="max-w-xl">
+            <p className="text-muted-foreground text-sm font-medium uppercase tracking-widest mb-4 animate-fade-in-up">
               IT Consulting &amp; Services
             </p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground leading-tight mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground leading-tight mb-6 animate-fade-in-up animate-delay-100">
               Transform Your
               <span className="block text-primary">Digital Enterprise</span>
             </h1>
-            <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+            <p className="text-lg text-muted-foreground leading-relaxed mb-8 animate-fade-in-up animate-delay-200">
               We partner with forward-thinking organizations to deliver digital
               workplace solutions, cloud consulting, and managed IT services
               that drive real results.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up animate-delay-300">
               <a href="mailto:contact@infosavi.com">
                 <Button className="bg-primary hover:bg-purple-light text-primary-foreground px-8 py-6 text-base font-medium group">
                   Schedule a Consultation
