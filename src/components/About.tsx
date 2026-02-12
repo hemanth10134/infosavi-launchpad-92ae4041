@@ -31,7 +31,7 @@ const About = () => {
 
           {/* Content */}
           <div className="animate-fade-in">
-            <p className="text-muted-foreground text-sm font-medium uppercase tracking-widest mb-4">
+            <p className="text-muted-foreground text-sm font-medium tracking-widest mb-4">
               About infoSavi
             </p>
             <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-6">
