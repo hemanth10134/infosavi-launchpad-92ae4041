@@ -18,7 +18,7 @@ const About = () => {
             <div className="rounded-2xl overflow-hidden shadow-corporate-lg">
               <img
                 src={aboutImage}
-                alt="InfoSavi office"
+                alt="infoSavi office"
                 className="w-full h-[500px] object-cover"
               />
             </div>
@@ -32,13 +32,13 @@ const About = () => {
           {/* Content */}
           <div className="animate-fade-in">
             <p className="text-muted-foreground text-sm font-medium uppercase tracking-widest mb-4">
-              About InfoSavi
+              About infoSavi
             </p>
             <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-6">
               Your Partner in IT Excellence
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              Founded in 2025, InfoSavi is a service-based IT consulting startup
+              Founded in 2025, infoSavi is a service-based IT consulting startup
               focused on helping organizations modernize their operations,
               embrace cloud solutions, and deliver exceptional workplace
               experiences.

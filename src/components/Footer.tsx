@@ -1,15 +1,23 @@
 import { Linkedin, Mail } from "lucide-react";
+import icon from "@/assets/icon.png";
 
 const Footer = () => {
   const footerLinks = {
     Services: [
-      "Digital Workplace Services",
-      "Service Management",
-      "Cloud Consulting",
-      "OaaS",
+      { name: "Digital Workplace Services", href: "#digital-workplace-services" },
+      { name: "Service Management", href: "#service-management" },
+      { name: "Cloud Consulting", href: "#cloud-consulting" },
+      { name: "OaaS", href: "#oaas" },
     ],
-    Company: ["About Us", "Our Team", "Contact"],
-    Legal: ["Privacy Policy", "Terms of Service"],
+    Company: [
+      { name: "About Us", href: "#about" },
+      { name: "Our Team", href: "#contact" },
+      { name: "Contact", href: "#contact" },
+    ],
+    Legal: [
+      { name: "Privacy Policy", href: "#privacy" },
+      { name: "Terms of Service", href: "#terms" },
+    ],
   };
 
   return (
@@ -19,10 +27,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-6">
-              <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-xl">I</span>
-              </div>
-              <span className="text-xl font-semibold">InfoSavi</span>
+              <img src={icon} alt="infoSavi Logo" className="h-12 w-auto object-contain brightness-0 invert" />
             </div>
             <p className="text-background/70 text-sm leading-relaxed mb-4">
               Strategic IT consulting for forward-thinking enterprises.
@@ -32,7 +37,7 @@ const Footer = () => {
             </p>
             <div className="flex gap-4">
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/company/infosavi"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-background/10 rounded-lg flex items-center justify-center hover:bg-background/20 transition-colors"
@@ -54,12 +59,12 @@ const Footer = () => {
               <h4 className="font-semibold mb-4">{category}</h4>
               <ul className="space-y-3">
                 {links.map((link) => (
-                  <li key={link}>
+                  <li key={link.name}>
                     <a
-                      href="#"
+                      href={link.href}
                       className="text-background/70 hover:text-background text-sm transition-colors"
                     >
-                      {link}
+                      {link.name}
                     </a>
                   </li>
                 ))}
@@ -71,7 +76,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-background/10 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-background/50 text-sm">
-            © 2025 InfoSavi. All rights reserved.
+            © 2025 infoSavi. All rights reserved.
           </p>
           <div className="flex gap-6">
             <a href="#" className="text-background/50 hover:text-background text-sm transition-colors">

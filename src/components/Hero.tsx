@@ -22,7 +22,7 @@ const Hero = () => {
             <p className="text-muted-foreground text-sm font-medium uppercase tracking-widest mb-4 animate-fade-in-up">
               IT Consulting &amp; Services
             </p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground leading-tight mb-6 animate-fade-in-up animate-delay-100">
+            <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-foreground leading-tight mb-6 animate-fade-in-up animate-delay-100">
               Transform Your
               <span className="block text-primary">Digital Enterprise</span>
             </h1>
