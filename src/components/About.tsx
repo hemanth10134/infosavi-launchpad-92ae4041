@@ -44,7 +44,7 @@ const About = () => {
               experiences.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
-              Based out of WeWork - Vaishnavi Signature, Bellandur, Bangalore,
+              Based out of WeWork  Vaishnavi Signature, Bellandur, Bangalore,
               our team brings together deep expertise in digital workplace
               services, service management, cloud consulting, and retail IT
               operations.
