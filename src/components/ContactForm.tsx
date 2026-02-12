@@ -65,8 +65,28 @@ export function ContactForm() {
     const watchService = form.watch("service");
 
     function onSubmit(values: z.infer<typeof formSchema>) {
-        toast.success("Message sent! We'll get back to you shortly.");
-        console.log(values);
+        // Build email body with form data
+        const serviceName = values.service === "other"
+            ? values.customService
+            : values.service.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+
+        const emailBody = `
+Name: ${values.name}
+Email: ${values.email}
+Phone: ${values.countryCode} ${values.phone}
+Service Interest: ${serviceName}
+
+---
+This message was sent via the InfoSavi contact form.
+        `.trim();
+
+        const subject = `New Contact Form Submission from ${values.name}`;
+        const mailtoLink = `mailto:contact@infosavi.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+
+        // Open email client
+        window.location.href = mailtoLink;
+
+        toast.success("Opening your email client...");
         form.reset();
     }
 
