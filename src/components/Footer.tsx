@@ -1,5 +1,6 @@
 import { Linkedin, Mail } from "lucide-react";
 import icon from "@/assets/icon.png";
+import { BackgroundBeams } from "@/components/ui/background-beams";
 
 const Footer = () => {
   const footerLinks = {
@@ -21,8 +22,9 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-foreground text-background py-16">
-      <div className="container mx-auto px-6 lg:px-8">
+    <footer className="bg-foreground text-background py-16 relative overflow-hidden">
+      <BackgroundBeams />
+      <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div className="lg:col-span-1">

@@ -109,6 +109,14 @@ export default {
             backgroundPosition: "350% 50%, 350% 50%",
           },
         },
+        meteor: {
+          "0%": { transform: "rotate(215deg) translateX(0)", opacity: "1" },
+          "70%": { opacity: "1" },
+          "100%": {
+            transform: "rotate(215deg) translateX(-500px)",
+            opacity: "0",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -116,6 +124,7 @@ export default {
         "fade-in-up": "fade-in-up 0.5s ease-out forwards",
         "fade-in": "fade-in 0.5s ease-out forwards",
         aurora: "aurora 60s linear infinite",
+        "meteor-effect": "meteor 5s linear infinite",
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
