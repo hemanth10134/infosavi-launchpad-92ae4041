@@ -35,7 +35,7 @@ const Footer = () => {
               Strategic IT consulting for forward-thinking enterprises.
             </p>
             <p className="text-background/60 text-xs leading-relaxed mb-6">
-              WeWork - Vaishnavi Signature, Outer Ring Road, Bellandur, Bangalore
+              WeWork  Vaishnavi Signature, Outer Ring Road, Bellandur, Bangalore
             </p>
             <div className="flex gap-4">
               <a
