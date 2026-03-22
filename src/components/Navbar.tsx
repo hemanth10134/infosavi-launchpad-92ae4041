@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
-import icon from "@/assets/icon.png";
+import colorIcon from "@/assets/Color Icon.png";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -26,8 +26,8 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-white/20 ${isScrolled
-        ? "bg-white/80 backdrop-blur-md shadow-md h-20"
-        : "bg-white/10 backdrop-blur-lg h-20"
+        ? "bg-white/80 backdrop-blur-md shadow-md h-24"
+        : "bg-white/10 backdrop-blur-lg h-24"
         }`}
     >
       <div className="container mx-auto px-6 lg:px-8 h-full">
@@ -36,9 +36,9 @@ const Navbar = () => {
           <div className="flex-1 flex justify-start">
             <a href="#" className="flex items-center gap-3">
               <img
-                src={icon}
+                src={colorIcon}
                 alt="infoSavi Logo"
-                className={`transition-all duration-300 h-20 w-auto object-contain mix-blend-multiply`}
+                className={`transition-all duration-300 h-20 w-auto object-contain`}
               />
             </a>
           </div>
